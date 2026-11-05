@@ -3,8 +3,8 @@
   "buildId": "f201d74a5e8c401991bb690719d1b74e",
   "contentLockSha256": "945938d2a25732a440a437d3e755feaa06ab4512671ecbdd8d18126f6294fe39",
   "archive": "renderer-0.4.0.tgz",
-  "bytes": 36517966,
-  "sha256": "9e3543d07f448bae4ad8a9a1fdf3f8684a9cd4e9f11654c3e404dd981df72302",
+  "bytes": 36422293,
+  "sha256": "48213a653cfe5d4db239e82d5a267fbe6b25ae42cff416a1d59d037a6fd12486",
   "files": [
     {
       "path": "arena-assets/art/degenquest-home.jpg",
@@ -1772,5 +1772,5 @@
       "sha256": "8396f8b53f90410da2f186013bcae9ede4e0743fb3e67d4905f0c7bc2ec4fb04"
     }
   ],
-  "distributionNotes": "The read-only observer adapter is packaged with the actual browser client. Build-machine paths in soundtrack provenance are normalized to source/raid-demo. Game content and readiness gates are unchanged."
+  "distributionNotes": "The read-only observer adapter is packaged with the actual browser client. Build-machine paths in soundtrack provenance are normalized to source/raid-demo. Game content and readiness gates are unchanged. Archive uses portable USTAR entries with no machine extended attributes or resource forks."
 }
