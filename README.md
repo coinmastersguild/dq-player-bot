@@ -4,6 +4,8 @@ Run an ordinary DegenQuest character locally, watch its **real first-person game
 
 **Claude operates the app; GLM makes the background play decisions.** This package pins `glm-5.3-flash-local` and rejects other models. Claude does not need to stay in a conversation for the bot to keep playing.
 
+The live guide is also published at [degenquest.ai/docs](https://degenquest.ai/docs), with [raw Markdown](https://degenquest.ai/docs.md).
+
 This is an experimental main-game client adapted from [dq-arena-bot](https://github.com/coinmastersguild/dq-arena-bot). It uses ordinary account authentication and player inputs. Combat and navigation still need playtesting; a confirmed creature kill is not yet established by the prototype validation. Automated content repair/deployment and the proposed 400-agent population are future work.
 
 ## Clone and open
