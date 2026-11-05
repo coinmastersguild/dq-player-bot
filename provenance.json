@@ -1,0 +1,10 @@
+{
+  "schema": "dq-player-bot-provenance-v1",
+  "version": "0.4.0",
+  "upstream": "https://github.com/coinmastersguild/dq-arena-bot",
+  "relationship": "Independent ordinary main-game client adapted from the Arena bot's session transport and operator concepts. Arena match APIs are not used as MMO entry APIs.",
+  "renderer": "assets/viewer-provenance.json",
+  "release": "assets/release.json",
+  "financialReferences": ["Main-game web3auth and account handlers", "AlphaAdmissionV3 native quote validator and Base deployment record", "Dedicated dq-economy HTTP API, chain adapters, deposit verification and exact withdrawal authorization"],
+  "scope": "Local native viewer, one GLM-driven ordinary player, Claude operator onboarding, local suspected playtest findings. No automatic game deployment or population simulation."
+}

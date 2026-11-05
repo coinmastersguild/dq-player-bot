@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+import{createInterface}from'node:readline';import{fileURLToPath}from'node:url';import path from'node:path';import{Operator}from'../src/operator.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),operator=new Operator(root),lines=createInterface({input:process.stdin,crlfDelay:Infinity});let queue=Promise.resolve(),pending=0;
+lines.on('line',line=>{if(line.length>65536||pending>=16){lines.close();return;}let m;try{m=JSON.parse(line);}catch{return;}if(m?.id===undefined)return;pending++;queue=queue.then(async()=>{try{const result=await operator.handle(m);process.stdout.write(JSON.stringify({jsonrpc:'2.0',id:m.id,result})+'\n');}catch{process.stdout.write(JSON.stringify({jsonrpc:'2.0',id:m.id,error:{code:-32601,message:'Unsupported request'}})+'\n');}}).finally(()=>pending--);});

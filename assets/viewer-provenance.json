@@ -1,0 +1,174 @@
+{
+  "schema": "dq-viewer-provenance-v1",
+  "gameVersion": "0.0.50",
+  "buildId": "f201d74a5e8c401991bb690719d1b74e",
+  "contentLockSha256": "945938d2a25732a440a437d3e755feaa06ab4512671ecbdd8d18126f6294fe39",
+  "observer": "render/observer.ts",
+  "role": "Read-only mirror of the one local bot session, actual game renderer and HUD; no second character login",
+  "packages": [
+    {
+      "name": "@adraffy/ens-normalize",
+      "version": "1.11.1",
+      "license": "MIT"
+    },
+    {
+      "name": "@noble/curves",
+      "version": "1.2.0",
+      "license": "MIT"
+    },
+    {
+      "name": "@noble/curves",
+      "version": "1.9.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@noble/hashes",
+      "version": "1.3.2",
+      "license": "MIT"
+    },
+    {
+      "name": "@noble/hashes",
+      "version": "1.8.0",
+      "license": "MIT"
+    },
+    {
+      "name": "@pixiv/three-vrm",
+      "version": "3.5.3",
+      "license": "MIT"
+    },
+    {
+      "name": "@solana/buffer-layout",
+      "version": "4.0.1",
+      "license": "MIT"
+    },
+    {
+      "name": "@solana/codecs-core",
+      "version": "2.3.0",
+      "license": "MIT"
+    },
+    {
+      "name": "@solana/codecs-numbers",
+      "version": "2.3.0",
+      "license": "MIT"
+    },
+    {
+      "name": "@solana/errors",
+      "version": "2.3.0",
+      "license": "MIT"
+    },
+    {
+      "name": "@solana/web3.js",
+      "version": "1.98.4",
+      "license": "MIT"
+    },
+    {
+      "name": "@wallet-standard/app",
+      "version": "1.1.1",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "base-x",
+      "version": "3.0.11",
+      "license": "MIT"
+    },
+    {
+      "name": "base-x",
+      "version": "5.0.1",
+      "license": "MIT"
+    },
+    {
+      "name": "bn.js",
+      "version": "5.2.5",
+      "license": "MIT"
+    },
+    {
+      "name": "borsh",
+      "version": "0.7.0",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "bs58",
+      "version": "4.0.1",
+      "license": "MIT"
+    },
+    {
+      "name": "bs58",
+      "version": "6.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "ethers",
+      "version": "6.17.0",
+      "license": "MIT"
+    },
+    {
+      "name": "eventemitter3",
+      "version": "5.0.4",
+      "license": "MIT"
+    },
+    {
+      "name": "jayson",
+      "version": "4.3.0",
+      "license": "MIT"
+    },
+    {
+      "name": "jpeg-js",
+      "version": "0.4.4",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "react",
+      "version": "19.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "rpc-websockets",
+      "version": "9.3.10",
+      "license": "LGPL-3.0-only"
+    },
+    {
+      "name": "safe-buffer",
+      "version": "5.2.1",
+      "license": "MIT"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.26.0",
+      "license": "MIT"
+    },
+    {
+      "name": "superstruct",
+      "version": "2.0.2",
+      "license": "MIT"
+    },
+    {
+      "name": "text-encoding-utf-8",
+      "version": "1.0.2"
+    },
+    {
+      "name": "three-mesh-bvh",
+      "version": "0.9.15",
+      "license": "MIT"
+    },
+    {
+      "name": "three",
+      "version": "0.184.0",
+      "license": "MIT"
+    },
+    {
+      "name": "tweetnacl",
+      "version": "1.0.3",
+      "license": "Unlicense"
+    },
+    {
+      "name": "uuid",
+      "version": "8.3.2",
+      "license": "MIT"
+    }
+  ]
+}

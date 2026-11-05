@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {execFileSync} from 'node:child_process';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const output=path.join(root,'DegenQuest Bot.app/Contents/MacOS/DegenQuestBot');
+fs.mkdirSync(path.dirname(output),{recursive:true});
+const cache=path.join(root,'.local/swift-cache');fs.mkdirSync(cache,{recursive:true});
+execFileSync('/usr/bin/swiftc',['-O','-module-cache-path',cache,'-framework','Cocoa','-framework','WebKit','-framework','CryptoKit',path.join(root,'native/BotConsole.swift'),'-o',output],{stdio:'inherit'});
+console.log(output);

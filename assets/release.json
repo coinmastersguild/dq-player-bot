@@ -1,0 +1,380 @@
+{
+  "schema": "dq-player-public-release-v1",
+  "contentLockSha256": "945938d2a25732a440a437d3e755feaa06ab4512671ecbdd8d18126f6294fe39",
+  "gameVersion": "0.0.50",
+  "titleHash": "0ed15315340b26228bbb9089eb04b0e1d1b6b6a2fb301f6901de3ff53a1d44ee",
+  "prealphaRelease": {
+    "schema": "dq-prealpha-release-identity-v1",
+    "targetGameVersion": "0.0.50",
+    "sourceGameVersion": "0.0.50",
+    "releaseSha256": "218ea53484e748939064c58c046173893f9069598c0db53cd353dfdafe46cc0c",
+    "adoptionSha256": "c49d33911cd6d28a2294997036f8d23dd4bcc6f7a699f1f42b3a9e971a7533bd",
+    "titlePackHash": "0ed15315340b26228bbb9089eb04b0e1d1b6b6a2fb301f6901de3ff53a1d44ee"
+  },
+  "files": {
+    "degenquest.dqz": {
+      "sha256": "77d6f7da3cf1f9b2fa1cf4704f35fb0f7171c9e9f39f70f69aeb9f6cbecbef3b",
+      "bytes": 2298030166,
+      "packHash": "0ed15315340b26228bbb9089eb04b0e1d1b6b6a2fb301f6901de3ff53a1d44ee",
+      "kind": "title",
+      "packId": "degenquest"
+    },
+    "blockreach-cinderhollow.dqz": {
+      "sha256": "785dec773567439009352627a855f067cc02893483bbcf807e8bb6940c0a354e",
+      "bytes": 1508720869,
+      "packHash": "9b28676955c83298a5a5cbce85c7acf00075b06d36a8f1b0f7b9ec3a4a84f9cd",
+      "kind": "zone",
+      "packId": "blockreach-cinderhollow"
+    },
+    "blockreach-cinderhollow.dqz-server": {
+      "sha256": "f8612facf17f4cbd799e6486685d1979b611919cbaefd671256f26f867e0d035",
+      "bytes": 812350269,
+      "packHash": "6c62d7e8d68a93d047415ce0963dad992171cb4441f71f3593dbed4230aea785",
+      "kind": "server",
+      "packId": "blockreach-cinderhollow"
+    },
+    "blockreach-sunhaven-coast.dqz": {
+      "sha256": "41f604497e9cd491487c438966f388b1540ff712d41fa16e491a84413567ba18",
+      "bytes": 1305937329,
+      "packHash": "5c53f719513895dcf089d46818ffa9e655eb5eb1793f11e4a63bdaee5e90089e",
+      "kind": "zone",
+      "packId": "blockreach-sunhaven-coast"
+    },
+    "blockreach-sunhaven-coast.dqz-server": {
+      "sha256": "5f5c1445c2b51ab3e14f76ef02c9934ed3e76d15f261f773b7ea9fb82df07efe",
+      "bytes": 83691880,
+      "packHash": "d27d995f612f24308fa360c6505392f9abefadf1cb492a9dab40c3fdf272c449",
+      "kind": "server",
+      "packId": "blockreach-sunhaven-coast"
+    },
+    "blockreach-stillwater-basin.dqz": {
+      "sha256": "6242bc4c01b413626a63d28facada5c4786ff80afa56393907daa9457fe4b59e",
+      "bytes": 975905651,
+      "packHash": "f217065cc5901de92d4cd179089647a50d7d0cce1bec4f171975515bfb2c167b",
+      "kind": "zone",
+      "packId": "blockreach-stillwater-basin"
+    },
+    "blockreach-stillwater-basin.dqz-server": {
+      "sha256": "d434ed881db25e6c95aa4c178171a239b9e4c64fba4119fb88aa17a5c7dded02",
+      "bytes": 336410818,
+      "packHash": "b214e343cc6a907d4e8c24013aa006a6b4dbc9b1d1466f3a8598c35335b6c77e",
+      "kind": "server",
+      "packId": "blockreach-stillwater-basin"
+    },
+    "blockreach-elderwood.dqz": {
+      "sha256": "e8d09ab096dba11085871b1a394d22a4d2c1fec74778bdc77fd8a85abbef24c7",
+      "bytes": 606392313,
+      "packHash": "630c547f96310c9663db90b7fa76bf7f8c7cb3252aa2dd6010aa8319fd966de0",
+      "kind": "zone",
+      "packId": "blockreach-elderwood"
+    },
+    "blockreach-elderwood.dqz-server": {
+      "sha256": "1cce140a2864a43e21f34d1b10ab5d3410e50ad59969f59c463618f5172d2c40",
+      "bytes": 146773263,
+      "packHash": "e3c08743246db22ca8be3397a68b9a317cc7e0b8bcda375ee002ab996c1ef263",
+      "kind": "server",
+      "packId": "blockreach-elderwood"
+    },
+    "coinfall.dqz": {
+      "sha256": "6f7ef55273d5e7d76a22b9fd0107364ce4d8f14e8442b9cae703ddf11026729f",
+      "bytes": 2715414451,
+      "packHash": "e93a53e6669e236ebf39a9aaf89bc26a95fa02b35542c59957fd2a6a7db84deb",
+      "kind": "zone",
+      "packId": "coinfall"
+    },
+    "coinfall.dqz-server": {
+      "sha256": "e4034d44183af1bd295bb86c66f4d42755afb79c020bb060595509929163db4c",
+      "bytes": 91626411,
+      "packHash": "b427fbd1f291c836da50e25d747c85db8e38557413ae1d6865bd0a1e5748267b",
+      "kind": "server",
+      "packId": "coinfall"
+    },
+    "sunken_bastion.dqz": {
+      "sha256": "f035b1fa9a03a513fa528b5e7ca135127fa7eea471ee12cc1b2cbee17523cca0",
+      "bytes": 29609965,
+      "packHash": "0814c84ea2f71af445a5eb21364d428525060b343456f924c58a41511d157de7",
+      "kind": "zone",
+      "packId": "sunken_bastion"
+    },
+    "sunken_bastion.dqz-server": {
+      "sha256": "f75b17c76f37e313781f19bf55ff2938641f4596d4edb8416193748ade0321a4",
+      "bytes": 468888,
+      "packHash": "9086e94a0967c6181749c9788b68d3397a69b61023462b3f24c960c59054782e",
+      "kind": "server",
+      "packId": "sunken_bastion"
+    },
+    "emberforge.dqz": {
+      "sha256": "1dda71bcd9e40923ce56ebab862ecfd06781b7bebaefde25c7654aa0c4408e56",
+      "bytes": 29025197,
+      "packHash": "4d42dcbc35c9138c6381a8697cd799c42189b7d790674387b90ba639a5381158",
+      "kind": "zone",
+      "packId": "emberforge"
+    },
+    "emberforge.dqz-server": {
+      "sha256": "e804c7c57e4af97f0a4ece94096506390ed6d56c56bf0024681b67b894fcfa4d",
+      "bytes": 468141,
+      "packHash": "a2f1d3bdede5231d3e0ac93716a2a2bb32d116a0fe61a89a6e9c706fd690e7c3",
+      "kind": "server",
+      "packId": "emberforge"
+    },
+    "frostspire_hollow.dqz": {
+      "sha256": "7b94f0a8fc70f1e38f8e1e9a107d5442d7954cb94827256c63612391a05b6c1c",
+      "bytes": 72086004,
+      "packHash": "a91593f20ffffcc331f6e2ffd598d9d54364a365a76ec7f1bc682d9350e851dc",
+      "kind": "zone",
+      "packId": "frostspire_hollow"
+    },
+    "frostspire_hollow.dqz-server": {
+      "sha256": "399b66c652c93a4bb18494c3c0962202ad2306347a07986c940dbe1316d9bff3",
+      "bytes": 41427895,
+      "packHash": "f61f417a73ac0c4a3d02655dc4f759fd72821f20f69264fc90260b168644c950",
+      "kind": "server",
+      "packId": "frostspire_hollow"
+    },
+    "drowned_temple.dqz": {
+      "sha256": "36f59161c9bd467eb02a61aaa6ebc0648b5ebc77c2113fd898edeafe740a0fe5",
+      "bytes": 90044662,
+      "packHash": "e373af6d096eb6e5ff3404c56a6d5d65e0716583ae51c2f836c3e5731dc8ad9d",
+      "kind": "zone",
+      "packId": "drowned_temple"
+    },
+    "drowned_temple.dqz-server": {
+      "sha256": "a7a07cd7f04a42c13698dfd6fd40850019ca8ea7e14d46b2c9508d857631f399",
+      "bytes": 34680469,
+      "packHash": "d258ad20874000371dac395dc1bcd047bf95b74ceae42605eee073ed1cdd7cab",
+      "kind": "server",
+      "packId": "drowned_temple"
+    },
+    "tidereaver_vault.dqz": {
+      "sha256": "7da8256d7c0beb9fa0f9fe1192c6b43475f110c753f11501855784fdb46e08f5",
+      "bytes": 28393647,
+      "packHash": "aa9342e3c73c10211d9cdc1ad3a705eaa39ec86ff96511ae3fca2b0aa8a80029",
+      "kind": "zone",
+      "packId": "tidereaver_vault"
+    },
+    "tidereaver_vault.dqz-server": {
+      "sha256": "5082c84fa2b6418921eb39d6a1c2a37654973361039c94e7000094ba9fdf2b8e",
+      "bytes": 447957,
+      "packHash": "985f256b59ce16764bd52a32e30675ccb9638987c4a84a53fe21421ff0da5fc9",
+      "kind": "server",
+      "packId": "tidereaver_vault"
+    },
+    "the_underloom.dqz": {
+      "sha256": "14edafe701e0434d7ed993b1197a93a1fd967448a1f8ad548728a7c02d0bbff5",
+      "bytes": 106091099,
+      "packHash": "639ceed1914aacd25b51a3b1bb64dc873b9b0521a597451756b7a5fe7631e22d",
+      "kind": "zone",
+      "packId": "the_underloom"
+    },
+    "the_underloom.dqz-server": {
+      "sha256": "3989eaba1bb8d306b73fee73c3918cc953b0bbd8b2b7d04c6adebab39da3dfe4",
+      "bytes": 26395312,
+      "packHash": "71b663b88a0fa6a68f6546cc589654dc15b26c5ea464895465c898279c52febd",
+      "kind": "server",
+      "packId": "the_underloom"
+    },
+    "crawl.dqz": {
+      "sha256": "d51ee6e0311d08807ec09b5d7a15f2e88cc81e3259e7897d10c7e98da15efdd0",
+      "bytes": 30127784,
+      "packHash": "851a1a295f503e9d8e460a01831fc6336c9927072b839a109907485e203937d6",
+      "kind": "zone",
+      "packId": "crawl"
+    },
+    "crawl.dqz-server": {
+      "sha256": "427b8687ce3b9f7847fb9fa5d3e1309482e2d6c664e9caf924abe36327f42cdf",
+      "bytes": 624141,
+      "packHash": "03770f82684d129fe53a61bfb4b43af1b9d41e27ec6c6cf934bf11504f129514",
+      "kind": "server",
+      "packId": "crawl"
+    },
+    "sleeper.dqz": {
+      "sha256": "1a7715cd97f43f722b553ac4a0fe078532bc63cb214e73a4af3f6eefa3f9675c",
+      "bytes": 33438697,
+      "packHash": "9136b669ca5ce6713438e803f68140c9a8946b758cfda8e5184221366db0a343",
+      "kind": "zone",
+      "packId": "sleeper"
+    },
+    "sleeper.dqz-server": {
+      "sha256": "f981ea01d03ae5aa15f972cb718c0b387393852e5c803c2bd7a43f52e221a757",
+      "bytes": 649623,
+      "packHash": "792dcc7204d7ea92fb446bba464c239a80b4ba6bb4b7e407d27969b40cca2729",
+      "kind": "server",
+      "packId": "sleeper"
+    },
+    "blockreach-dawnmere-coast.dqz": {
+      "sha256": "b42299c5f940e3f947c3154713bca4a9070d8577350d0a7c302fa5822e7d86e4",
+      "bytes": 1662661579,
+      "packHash": "b001cd835ce9b75a3f8e99d9a874e5896de6f314239f005a07f649ed6693b914",
+      "kind": "zone",
+      "packId": "blockreach-dawnmere-coast"
+    },
+    "blockreach-dawnmere-coast.dqz-server": {
+      "sha256": "a78794dc1d07bacdb7e5f680271a5dbeb55a91bdde5a8105ff1754e71ed646fe",
+      "bytes": 51905604,
+      "packHash": "f8eb3b83361ac78c1ead35f3862a9805fee9d74cebf7e8e794d890d3a15b63f4",
+      "kind": "server",
+      "packId": "blockreach-dawnmere-coast"
+    },
+    "blockreach-silverrun-reach.dqz": {
+      "sha256": "47bfce6515d3611eeec612be05fe41847431c903b6a40bd901c2ef86d8180c34",
+      "bytes": 1187346161,
+      "packHash": "eefd49f3edcf2afaf5ecd95c32a6ae5d73964e113665673d3621d02677c4472d",
+      "kind": "zone",
+      "packId": "blockreach-silverrun-reach"
+    },
+    "blockreach-silverrun-reach.dqz-server": {
+      "sha256": "61ecbb847bd744a6638b6e97d8e7835a7f28439d9828308289567f26c372ccc3",
+      "bytes": 416206034,
+      "packHash": "da903a58e91f3e0d668347ee9f3231eb886dd741e04cf345565664560f3c5465",
+      "kind": "server",
+      "packId": "blockreach-silverrun-reach"
+    },
+    "blockreach-windrest-downs.dqz": {
+      "sha256": "78fe0869e45b562d6bbea60ab217493ef3db67a60e8470f0c37faa34231e1b03",
+      "bytes": 282152858,
+      "packHash": "6b041d3e05593e2dab14088c1f032cfdf03dc6733a7492b78ab994a51fed5c4d",
+      "kind": "zone",
+      "packId": "blockreach-windrest-downs"
+    },
+    "blockreach-windrest-downs.dqz-server": {
+      "sha256": "7f4c5daa9488a8b4a08d6d3461e35f25989f6d526b27b9c5af8cc03a0cfb2ea4",
+      "bytes": 25691756,
+      "packHash": "6f0a6d780a115702f2de827ac4658850161fa065c8023b4851c6ef1c99c7312f",
+      "kind": "server",
+      "packId": "blockreach-windrest-downs"
+    },
+    "blockreach-swamp-biome.dqz": {
+      "sha256": "cb6d50e78fb9ef9adc3c3fa5d5a435ec0c8bd44547db52743aa48d2ddedf7240",
+      "bytes": 446456097,
+      "packHash": "8dccea0e8b90a668fb87305cd954c313aeeb46ec114be527320850fc9fe28764",
+      "kind": "zone",
+      "packId": "blockreach-swamp-biome"
+    },
+    "blockreach-swamp-biome.dqz-server": {
+      "sha256": "d2ec74335ab74036f8f739c0ba9d041e1d319ab638ad278c238aacbbfab51e6d",
+      "bytes": 182167044,
+      "packHash": "1e5bec74061833e94d05bd004bf63a566b34c57901dfe61069f0857ce21e10d7",
+      "kind": "server",
+      "packId": "blockreach-swamp-biome"
+    },
+    "blockreach-amberwold.dqz": {
+      "sha256": "06f2a39624a2c87784d626ab17ad69be8eafff1c450cc69448abd7844362feeb",
+      "bytes": 91420952,
+      "packHash": "468a05a71f13827a7f81ecf0c594be2d13293068a9a15978b4d34ad17de8fc63",
+      "kind": "zone",
+      "packId": "blockreach-amberwold"
+    },
+    "blockreach-amberwold.dqz-server": {
+      "sha256": "51174f71fed04cd48f13af464fa385b8415a2272c804b37b86b41b52270ab724",
+      "bytes": 2173946,
+      "packHash": "1170831c73ffa6eb05871bd3489cc6e8c17fe73e66556324f5b88cfa3b1d4b61",
+      "kind": "server",
+      "packId": "blockreach-amberwold"
+    },
+    "blockreach-crownspire-pass.dqz": {
+      "sha256": "180260517f2aab301d6935dde03d34413b076c8b42fc2b28af7d10feaa401bb2",
+      "bytes": 74452624,
+      "packHash": "16da96dbe8c7a43c650a1479ac940c8202dfb1c4951f53acc142b68e0fd99b75",
+      "kind": "zone",
+      "packId": "blockreach-crownspire-pass"
+    },
+    "blockreach-crownspire-pass.dqz-server": {
+      "sha256": "cf774faecc3559c5190d88cf13fc9a46edcf27de88397fbb4d1384f053fbcea7",
+      "bytes": 12660595,
+      "packHash": "a99481fb2244bd61411c93b9afa6acd1efe2f87ed05e6fd1cadb644a7a4ed4b0",
+      "kind": "server",
+      "packId": "blockreach-crownspire-pass"
+    },
+    "blockreach-city-nethmoor.dqz": {
+      "sha256": "2c441d111ef686201befc35a708a49df03b73ce76594d50a8a37bb90c0facabb",
+      "bytes": 479795133,
+      "packHash": "0539e14694ff5e90ef080b79918092bb697a66a57b974ee32b427d71238b99f6",
+      "kind": "zone",
+      "packId": "blockreach-city-nethmoor"
+    },
+    "blockreach-city-nethmoor.dqz-server": {
+      "sha256": "ca7b8ce1f6346ac73973238065f96223f11d9ddde7b630e48822279f7a86fe46",
+      "bytes": 103090005,
+      "packHash": "6babe351277ba5e789fcf60de1db5c76bc3d6a151339acd9c95561a2834d2eae",
+      "kind": "server",
+      "packId": "blockreach-city-nethmoor"
+    },
+    "freehold.dqz": {
+      "sha256": "ac4a5dd948d10783e6872ce92ab6156cd32e87088bfe58e275e45ca400584520",
+      "bytes": 703831188,
+      "packHash": "0bb6a35c092b5a3efabdca4bb619bc212694a02e4691db2f4159dc6b9f59813b",
+      "kind": "zone",
+      "packId": "freehold"
+    },
+    "freehold.dqz-server": {
+      "sha256": "6f8c7952a3e577e857cbc54247367d7e8fc10184b50295672f0fccbace88ac51",
+      "bytes": 161109968,
+      "packHash": "1cb77871deb9e553888be5b9a03e7886a75002838649c64ee11a5382754cf03f",
+      "kind": "server",
+      "packId": "freehold"
+    },
+    "blockreach-city-skaldheim.dqz": {
+      "sha256": "34e7280fb9d4f9331dff1a4446287e243f895d17b349c0aff66f0fa4d5ac20dc",
+      "bytes": 391148734,
+      "packHash": "118763c54104ab503b1fad62b6834448113b216d50bab1d39b1eab9886083427",
+      "kind": "zone",
+      "packId": "blockreach-city-skaldheim"
+    },
+    "blockreach-city-skaldheim.dqz-server": {
+      "sha256": "c63eeeb9937c13ebf809926a515f488f04e669c822a2f2766d49632899c7301c",
+      "bytes": 64680690,
+      "packHash": "af6d78ded82cf9919b6966ff7cb3e4f2580901c74fcd60b8033e06cd347ccfd1",
+      "kind": "server",
+      "packId": "blockreach-city-skaldheim"
+    },
+    "blockreach-frostveil-vale.dqz": {
+      "sha256": "6ee0f96d40ab779a8c56701c08a52cd48d483c8e11d6a661e81858c2fa0ea9cf",
+      "bytes": 301413618,
+      "packHash": "ae4a74f84e36b6adb22fee4f279f2cbd7ca9db95118f9211e4b9365852c8ae60",
+      "kind": "zone",
+      "packId": "blockreach-frostveil-vale"
+    },
+    "blockreach-frostveil-vale.dqz-server": {
+      "sha256": "9bbe8971ac38b0801cc34a04893e1b52cc6c208946650f165cac5641f3dff5c8",
+      "bytes": 19005644,
+      "packHash": "25ea33f921afb3206f12d4bc5104e3b1f069eae4a2b2d6b96bc14caa00582e8d",
+      "kind": "server",
+      "packId": "blockreach-frostveil-vale"
+    },
+    "blockreach-city-grukmire.dqz": {
+      "sha256": "72d46e406da0e4bd637daaba1f0846d24a7d09470fc724eaf3f1e1969ac0dacd",
+      "bytes": 510023314,
+      "packHash": "e1289f435ac7d91257b8be5e743b721bbfb5fcc0bfee1f54ad26a70466b91cb7",
+      "kind": "zone",
+      "packId": "blockreach-city-grukmire"
+    },
+    "blockreach-city-grukmire.dqz-server": {
+      "sha256": "621747618eba7f8771b9c5eca105bc26411838d062af4a00eeb9dfb064f12d78",
+      "bytes": 121532026,
+      "packHash": "5fa62bef3293abcc64c1ce394ea64310dc236233f732bc7ce35635b56cff0f36",
+      "kind": "server",
+      "packId": "blockreach-city-grukmire"
+    },
+    "coinfall-sewers.dqz": {
+      "sha256": "32722f426262e1b3c15e351c8422d0da524f88eb3f42f0438bc950915787e90d",
+      "bytes": 175864225,
+      "packHash": "821f76a8f475f375f52208466fedd20ea4567d64e8ec2419ff470d9901c4ffdd",
+      "kind": "zone",
+      "packId": "coinfall-sewers"
+    },
+    "coinfall-sewers.dqz-server": {
+      "sha256": "91b4b033e32c7f5e406c3d502216de204a2e649d6d3a8b5c4ff5b6836885537b",
+      "bytes": 5211776,
+      "packHash": "236134f4b1b96db1ccbe4ab14915111ce5bccbfad25b102c47cb8d34caf76b07",
+      "kind": "server",
+      "packId": "coinfall-sewers"
+    },
+    "degenquest.dqz-server": {
+      "sha256": "fe0802c8887ee97670daafbba7dc276102e93744c117a6ebf14a69bb9fe55094",
+      "bytes": 3642258226,
+      "packHash": null,
+      "kind": "player",
+      "packId": "degenquest"
+    }
+  }
+}

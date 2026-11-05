@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {decodeNavigationCollision} from '../src/navigation-mesh.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const configFile=path.join(root,'.secrets/player.local.json'),config=JSON.parse(fs.readFileSync(configFile,'utf8'));
+if(!process.argv[2]||!process.argv[3])throw Error('Supply the public presentation index and its collision asset');
+const index=JSON.parse(fs.readFileSync(process.argv[2],'utf8')),encoded=fs.readFileSync(process.argv[3]);
+const {pin,record}=decodeNavigationCollision(encoded,index,config);
+const directory=path.join(path.resolve(path.dirname(configFile),config.stateDirectory),'navigation',config.world);
+fs.mkdirSync(directory,{recursive:true,mode:0o700});
+fs.writeFileSync(path.join(directory,'collision.bin'),encoded,{mode:0o600});
+fs.writeFileSync(path.join(directory,'index.json'),JSON.stringify(index),{mode:0o600});
+const receipt={schema:'dq-player-navigation-cache-v1',at:new Date().toISOString(),world:config.world,contentLockSha256:config.contentLockSha256,presentationPackHash:index.packHash,asset:record.asset,sha256:pin.sha256,bytes:pin.len,decodedBytes:record.assetStorage?.decodedBytes,scope:'Verified public player presentation collision; no game/server/content change'};
+fs.writeFileSync(path.join(directory,'receipt.json'),JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify(receipt));

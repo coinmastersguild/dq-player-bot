@@ -1,0 +1,3 @@
+#!/usr/bin/env node
+import{fileURLToPath}from'node:url';import path from'node:path';import{Operator,operatorTools}from'../src/operator.mjs';
+const[command,json='{}']=process.argv.slice(2);if(!command||command==='--help'){console.log('Usage: npm run setup -- TOOL [JSON_ARGUMENTS]\n'+operatorTools.map(t=>t.name+' — '+t.description).join('\n'));}else{try{const op=new Operator(path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'));const value=await op.call(command,JSON.parse(json));console.log(typeof value==='string'?value:JSON.stringify(value,null,2));}catch(e){console.error(e.message);process.exitCode=1;}}

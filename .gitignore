@@ -1,0 +1,15 @@
+node_modules/
+.local/
+.secrets/
+state/
+runs/
+player.config.json
+player.production.json
+*.log
+*.pem
+*.key
+*.env
+.env*
+.DS_Store
+DegenQuest Bot.app/Contents/MacOS/*
+!.env.example
