@@ -1,4 +1,5 @@
 import WebSocket from 'ws';
+import https from 'node:https';
 import {PlayerBridge} from './bridge.mjs';
 import {redact} from './recording.mjs';
 
@@ -39,7 +40,10 @@ export async function connectPlayer(session, config, {record = () => {}, WebSock
     contentLockSha256:config.contentLockSha256,nativeSession:config.nativeSession,
     roster:{realm:checked.realm,characters:[checked.renderCharacter]},character:checked.renderCharacter,
     entry:redact(entry)}});
-  const socket = new WebSocketImpl(endpoint, {origin: session.origin, followRedirects: false, maxPayload: 2 * 1024 * 1024, handshakeTimeout: 20000});
+  // ws supplies createConnection itself. Pass the configured HTTPS agent
+  // explicitly so protected runtimes retain their required proxy transport.
+  const socket = new WebSocketImpl(endpoint, {origin: session.origin, followRedirects: false, maxPayload: 2 * 1024 * 1024, handshakeTimeout: 20000,
+    ...(endpoint.startsWith('wss:') ? {agent: https.globalAgent} : {})});
   const bridge = new PlayerBridge(config, {record,
     send: message => { if (socket.readyState !== WebSocket.OPEN) throw Error('World socket closed'); socket.send(JSON.stringify(message)); },
     close: () => { socket.close(); const deadline = setTimeout(() => socket.terminate(), 1000); deadline.unref(); }});
@@ -48,7 +52,12 @@ export async function connectPlayer(session, config, {record = () => {}, WebSock
     if (binary) return bridge.stop('Unexpected binary world frame');
     try {const frame=JSON.parse(data.toString());bridge.receive(frame);if(bridge.phase!=='stopped')observer?.({kind:'render-frame',data:redact(frame)});} catch { bridge.stop('Invalid world JSON frame'); }
   });
-  socket.on('error', () => bridge.stop('World socket failed'));
+  socket.on('error', error => {
+    record('transport-error', {code: /^[A-Z0-9_]+$/.test(error.code ?? '') ? error.code : null,
+      httpStatus: Number(/Unexpected server response: (\d{3})/.exec(error.message ?? '')?.[1]) || null,
+      agent: https.globalAgent.constructor.name});
+    bridge.stop('World socket failed');
+  });
   socket.on('close', () => bridge.stop('World socket closed'));
   return bridge;
 }

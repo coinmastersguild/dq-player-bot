@@ -127,7 +127,7 @@ async function main() {
         failures++;
         feedback.report({category:'runtime',title:'Player could not enter the production world',detail:error.message,evidence:{runId},suspected:true});
         status({phase:'reconnecting',error:error.message,failures});
-        if ((error.status===401 || /unexpired|session token/i.test(error.message)) && config.signerFile) {
+        if ((error.status===401 || /unexpired|session token/i.test(error.message)) && (config.signerFile||config.loginProvider==='agent-wallet')) {
           try { const renewal=await renewLogin(config);saveJson(path.join(stateRoot,'login-status.json'),renewal); }
           catch(loginError){status({phase:'authentication-blocked',error:loginError.message});}
         }

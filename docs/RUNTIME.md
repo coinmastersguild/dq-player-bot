@@ -46,6 +46,26 @@ The controller restarts unexpected child exits; the service reconnects with back
 
 ## Playtest loop status
 
+### Protected hosted player sessions
+
+An existing protected `agent-wallet` runtime can run `bin/service.mjs` with a
+native session profile instead of a software wallet. Extend a release-verified
+player profile with `loginProvider: "agent-wallet"`, `walletChain: "ethereum"`
+or `"solana"`, the runtime's own `walletAddress`, and a mode-0600 `tokenFile`.
+Remove `cookieFile` and `signerFile`. The signer must run as that wallet's own
+runtime user. Login renewal requests only a fresh, exact DegenQuest login message
+and an own-wallet message signature; it neither exports keys nor submits a chain
+transaction. Admission and normal character ownership are still required.
+
+Hosted network policy remains authoritative. A host requiring an HTTPS proxy
+must configure its HTTPS agent in each Node player process, including restarted
+children. The WebSocket transport explicitly preserves that configured agent.
+Keep a private GLM router behind a local relay if it is outside the supported
+endpoint origins; retain the exact model check and that runtime's own credential.
+This advanced profile does not add hosted setup or a Solana checkout UI to the
+desktop onboarding flow. A service manager must supervise hosted processes;
+the Mac app does not install a hosted daemon.
+
 The player records suspected runtime, navigation, content and bot findings with run identity and grounded evidence. Findings deduplicate durably. A worker's report of success cannot close a finding: independent post-change validation is required. This public package leaves content-agent dispatch disabled. It does not publish or deploy the game.
 
 Current evidence supports ordinary world entry, a real first-person render, doorway navigation, NPC interaction, exploration, attempted combat, death and ordinary respawn recovery in the prototype. The first recorded hunt was interrupted by a stronger creature; no confirmed kill, XP gain or loot delivery was established. The public setup separately verifies fresh wallet login and a signed unsigned-payment quote. No new paid admission/deposit/withdrawal is claimed as tested by this release.

@@ -7,6 +7,10 @@ import {readPrivateFile, validateOrigin} from './session.mjs';
 // This module signs only the configured game's fresh login message. No chain RPC,
 // transaction signing, purchases, transfer or generic signing API exists here.
 export async function renewLogin(config, {fetchImpl = fetch} = {}) {
+  if(config.loginProvider==='agent-wallet'){
+    const {renewProtectedLogin}=await import('./protected-login.mjs');
+    return renewProtectedLogin(config,{fetchImpl});
+  }
   const origin = validateOrigin(config.origin);
   if (origin !== 'https://play.degenquest.ai') throw Error('Automatic login is pinned to the production game');
   if (!config.signerFile || !config.walletAddress || !config.cookieFile) throw Error('Bot login signer is not configured');
