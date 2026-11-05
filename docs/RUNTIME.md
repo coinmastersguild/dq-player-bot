@@ -81,3 +81,8 @@ The automated tests cover protocol/identity fencing, real loopback HTTP/WebSocke
 - **Create unknown:** inspect the fresh owned roster and saved name/request before reconciling the pending create file. Do not send another create merely because the first response was lost.
 - **Blank/slow game:** allow the cold asset load, confirm WebGPU support and inspect local logs. Readiness and actual draw calls must both be present; a loading screen is not a rendered world.
 - **Stuck or dying:** Stop if needed; inspect actual local observations and findings. Navigation, danger avoidance, class behavior, zone handoffs and long-running progression remain experimental.
+# Optional content playtest missions
+
+Set `inference.playtest.role` in your private player profile to `combat-loot`, `quests-navigation` or `progression-recovery`. Without it the bot retains its creature-hunting objective. Every mission still uses the pinned GLM model and ordinary player actions. Quest discovery is limited to observed accessible NPCs and a cooldown budget; the bot receives no private spawn coordinates. It avoids trivial low-level farming unless pursuing an accepted quest. Models, animation and sound require separate renderer/audio inspection.
+
+Company feedback is an operator-side integration, configured separately from the legacy direct repair-job dispatcher. `company-feedback-status.json` can expose sanitized delivery and board task receipts in the console. A collector receipt means transport succeeded; actual task IDs and publication timestamps show board delivery. Installing this public player app does not grant access to the Pioneer company or automatically upload a user's gameplay there.

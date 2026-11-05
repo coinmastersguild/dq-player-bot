@@ -42,7 +42,7 @@ async function main() {
   // process disconnects the character instead of leaving an orphan controller.
   if(process.send)process.once('disconnect',stop);
   const status = data => {
-    const result = {at: new Date().toISOString(), pid: process.pid, botSource, model: GLM_MODEL, characterId: config.characterId, world: config.world, statistics, ...data};
+    const result = {at: new Date().toISOString(), pid: process.pid, botSource, model: GLM_MODEL, playtestRole:config.inference.playtest?.role??null, characterId: config.characterId, world: config.world, statistics, ...data};
     saveJson(path.join(stateRoot, 'status.json'), result); saveJson(path.join(stateRoot, 'statistics.json'), statistics);
   };
   try {

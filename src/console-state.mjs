@@ -44,7 +44,7 @@ function activity(record) {
 }
 export function collectConsoleState(root, service, now = Date.now()) {
   const state = path.join(root, 'state'), raw = read(path.join(state, 'status.json'));
-  const status = raw ? pick(raw, ['at','phase','characterId','world','runId','tick','model','openFindings','snapshotAgeMs']) : null;
+  const status = raw ? pick(raw, ['at','phase','characterId','world','runId','tick','model','playtestRole','openFindings','snapshotAgeMs']) : null;
   if (status) {
     status.statistics = pick(raw.statistics, ['connections','snapshots','decisions','findings','distance','castsSubmitted','deaths','planningFailures']);
     status.goal = pick(raw.goal, ['kind','targetId','heading','at','expiresAt']);
@@ -65,6 +65,12 @@ export function collectConsoleState(root, service, now = Date.now()) {
   const findings = fs.existsSync(findingsPath) ? fs.readdirSync(findingsPath).filter(n=>/^[a-f0-9]{24}\.json$/.test(n)).map(n=>read(path.join(findingsPath,n))).filter(Boolean)
     .sort((a,b)=>String(b.lastSeenAt).localeCompare(String(a.lastSeenAt))).slice(0,20).map(f=>({id:f.id,category:text(f.category,30),title:text(f.title,200),detail:text(f.detail,600),status:text(f.status,80),jobState:text(f.dispatch?.state,40),occurrences:f.occurrences,suspected:f.suspected!==false,lastSeenAt:f.lastSeenAt})) : [];
   const feedback = read(path.join(state,'feedback-status.json'));
+  const company = read(path.join(state,'company-feedback-status.json'));
+  const published = company?.publication?.source;
+  const companyFeedback = company ? {enabled:company.enabled===true,at:company.at,receivedByPublisher:company.receivedByPublisher===true,
+    sourceId:text(company.sourceId,30),findingRecords:company.findingRecords,stale:now-Date.parse(company.at)>600000,
+    publishedAt:company.publication?.at,playerAt:published?.playerAt,
+    boardTasks:(published?.boardTasks??[]).slice(0,30).map(t=>pick(t,['id','number','lastPublishedAt','findingCount']))} : null;
   const age = observation ? Math.max(0,now-observation.at) : null;
   const entries = records.map(activity).filter(Boolean);
   const recent = ['game','action','diagnostic'].flatMap(type=>entries.filter(e=>e.type===type).slice(type==='action'?-35:-20)).sort((a,b)=>b.at-a.at);
@@ -72,6 +78,6 @@ export function collectConsoleState(root, service, now = Date.now()) {
     live:service.activeState==='active' && status?.phase==='playing' && age!==null && age<6000 && now-Date.parse(status.at)<6000,
     observationAgeMs:age,
     plan:plan ? {at:plan.at,model:text(plan.data.model,80),goal:pick(plan.data.plan?.goal,['kind','targetId','heading']),rationale:text(plan.data.plan?.rationale,1600)} : null,
-    dialog,activity:recent,findings,
+    dialog,activity:recent,findings,companyFeedback,
     feedback:feedback ? {at:feedback.at,workerModel:text(feedback.workerModel,80),jobs:(feedback.events??[]).slice(0,20).map(j=>pick(j,['findingId','jobId','state']))} : null};
 }

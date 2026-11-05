@@ -80,6 +80,9 @@ function renderActivity(){
 }
 function renderFindings(){
   const box=$('findings'),findings=state?.findings??[];box.replaceChildren();set('issue-count',state?.status?.openFindings??findings.length);
+  const company=state?.companyFeedback;
+  const footer=document.querySelector('.findings-footer');
+  if(footer)footer.textContent=company?`${company.stale?'Company collection stale':company.receivedByPublisher?'Company received':'Company delivery pending'} · ${(company.boardTasks??[]).map(t=>'#'+t.number).join(', ')||'Board publication pending'} · ${company.publishedAt??company.at}`:'Play → observe → investigate → repair → retest';
   for(const f of findings){const d=node('details','finding'),summary=node('summary');const top=node('div','finding-top');const status=f.status==='assigned'&&f.jobState?f.jobState:f.status;top.append(node('span','',`${f.category.toUpperCase()} · ${f.suspected?'SUSPECTED':'CONFIRMED'}`),node('span','state',status.replaceAll('-',' ')));summary.append(top,node('h3','',f.title));d.append(summary,node('p','',`${f.detail}\nObserved ${f.occurrences} time${f.occurrences===1?'':'s'}.`));box.append(d);}
   if(!findings.length)box.append(node('p','empty-copy','No playtest findings in the current feed.'));
 }
