@@ -14,3 +14,4 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm test
       - run: npm run renderer:install
+      - run: npm run audit:public

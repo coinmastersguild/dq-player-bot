@@ -6,6 +6,8 @@ Verification date: 2026-11-05 UTC.
 - `npm ci` installs the locked dependency set; the initial npm audit reported no known vulnerabilities in that dependency set. This is not an audit of the embedded game client.
 - `npm run bootstrap` verifies all 353 renderer files and builds the native Cocoa/WebKit application from this package without a private game checkout.
 - A fresh, unfunded dedicated wallet authenticated to the production main-game account service. Its roster was empty. A live signed V3 access quote passed the exact contract/signer/beneficiary/amount/expiry validator. No admission payment was sent.
+- A clean Git clone completed locked installation, all 89 tests, verified renderer installation, native application compilation and the public export check. An app opened before account setup stayed inactive and displayed setup guidance.
+- A separate temporary setup preflight read the existing owned hero, verified the exact GLM model and downloaded/decoded its hash-pinned public navigation data. It selected the authored/saved world and left Stop selected; it opened no second gameplay connection and was removed after verification.
 - Public release discovery verified 65 offered native character/class combinations, including the mage configuration used by the prototype.
 - The separate token-service login and `/api/wallet` read succeeded. Both GOLD and DQS reported ready with the documented mainnet identities at this check. No deposit or withdrawal was submitted. Readiness is a point-in-time service observation.
 - Read-only Base calls verified GOLD decimals and the admission pause/signer state. Solana finalized supply/mint checks verified the DQS identity and decimals. Details are in CONTRACTS.md.

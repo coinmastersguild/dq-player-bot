@@ -4,7 +4,7 @@ There are three separate balances and authorizations: your external wallet pays 
 
 ## Give your agent funds to start
 
-Run `create_wallet` and `funding_address` through Claude or `npm run setup`. Fund the returned **bot wallet**, using **Base mainnet ETH (chain ID 8453)**. ETH on Ethereum mainnet is a different network. This package does not bridge, buy tokens, access a project treasury or automatically refill the wallet.
+Run `create_wallet` and `funding_address` through Claude or `npm run setup`. Fund the returned **bot wallet**, using **Base mainnet ETH (chain ID 8453)**. ETH on Ethereum mainnet is a different network. This package does not bridge, buy tokens, access a project treasury or automatically refill the wallet. If Claude already has your trusted wallet integration, you can authorize it to transfer a specific amount of Base ETH to this public address. Otherwise make that transfer in your normal wallet. The bot operator never needs your funding wallet’s private key.
 
 Authenticate before checking the roster and admission. Login is a free message signature, not a transaction. Existing owned characters can play without purchasing another slot. A new character needs an available paid creation slot. The initial access product grants creation slots according to the current server response; inspect `access.slots` rather than hardcoding price or slot count.
 
